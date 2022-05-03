@@ -1,0 +1,28 @@
+{
+  "name": "tictactoe-server",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "damilola jerugba",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --quiet index.ts",
+    "start:prod": "node build/index.js",
+    "build": "tsc --project ./"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.31",
+    "nodemon": "^2.0.16",
+    "prisma": "^3.13.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}
