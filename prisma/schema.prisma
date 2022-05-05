@@ -10,3 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Game {
+  id       String  @id @default(cuid())
+  creator  String
+  opponent String?
+  board    String
+  code     String  @unique
+}

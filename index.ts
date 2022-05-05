@@ -10,6 +10,7 @@ dotenv.config({ path: path.resolve(__dirname, './.env') });
 
 const server = http.createServer(app);
 
+// web socket
 const io = new Server(server);
 
 io.on("connection", (socket) => {
