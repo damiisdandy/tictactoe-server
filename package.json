@@ -7,7 +7,10 @@
   "scripts": {
     "start": "nodemon --quiet index.ts",
     "start:prod": "node build/index.js",
-    "build": "tsc --project ./"
+    "build": "tsc --project ./",
+    "migrate": "prisma migrate dev",
+    "start-db": "docker-compose up",
+    "studio": "prisma studio"
   },
   "dependencies": {
     "@prisma/client": "3.13.0",
