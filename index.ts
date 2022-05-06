@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import http from "http";
 import path from "path";
 import { Server } from "socket.io";
 import app, { prisma } from "./app";
