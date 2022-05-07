@@ -50,6 +50,28 @@ io.on("connection", (socket) => {
     });
     io.sockets.in(id).emit('newBoard', board);
   });
+  socket.on("hasWinner", async ({ winner, game }) => {
+    switch (winner) {
+      case "OPPONENT":
+        await prisma.game.update({
+          where: {
+            code: game,
+          },
+          data: {
+            opponent_score: { increment: 1 }
+          }
+        });
+      case "CREATOR":
+        await prisma.game.update({
+          where: {
+            code: game,
+          },
+          data: {
+            creator_score: { increment: 1 }
+          }
+        });
+    }
+  });
   socket.on("reset", async ({ id }) => {
     const { board } = await prisma.game.update({
       where: {

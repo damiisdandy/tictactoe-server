@@ -11,9 +11,11 @@ datasource db {
 }
 
 model Game {
-  id       String  @id @default(cuid())
-  creator  String
-  opponent String?
-  board    String
-  code     String  @unique
+  id             String  @id @default(cuid())
+  creator        String
+  opponent       String?
+  board          String
+  code           String  @unique
+  creator_score  Int     @default(0)
+  opponent_score Int     @default(0)
 }

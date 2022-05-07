@@ -9,7 +9,7 @@
     "start:prod": "node build/index.js",
     "build": "tsc --project ./",
     "migrate": "prisma migrate dev",
-    "start-db": "docker-compose up",
+    "start-db": "docker-compose up -d",
     "studio": "prisma studio"
   },
   "dependencies": {
